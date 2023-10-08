@@ -107,12 +107,11 @@ Our work is implemented base on the following projects. We really appreciate the
 If any parts of our paper and code help your research, please consider citing us and giving a star to our repository.
 
 ```
-@inproceedings{
-    anonymous2023sparse,
+@article{
+    wei2023sparse,
     title={Sparse Parameterization for Epitomic Dataset Distillation},
-    author={Anonymous},
-    booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-    year={2023},
-    url={https://openreview.net/forum?id=ZIfhYAE2xg}
+    author={Wei, Xing and Cao, Anjia and Yang, Funing and Ma, Zhiheng},
+    booktitle={Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS 2023)},
+    year={2023}
 }
 ```
