@@ -60,8 +60,8 @@ pip install -r requirements.txt
 
 * For CIFAR10 and CIFAR100:
 ```
-python buffer.py --dataset CIFAR10/CIFAR100 --model ConvNet --train_epochs 50 --num_experts 100 --zca
-python distill.py --dataset CIFAR10/CIFAR100 --model ConvNet --zca
+python buffer.py --dataset {CIFAR10/CIFAR100} --model ConvNet --train_epochs 50 --num_experts 100 --zca
+python distill.py --dataset {CIFAR10/CIFAR100} --model ConvNet --zca
 ```
 
 * For TinyImageNet:
@@ -82,7 +82,7 @@ More hyperparameter settings are concluded at the end of networks.py. After dist
 
 * For CIFAR10 and CIFAR100:
 ```
-python eval.py --datset CIFAR10/CIFAR100 --model ConvNet --zca
+python eval.py --dataset {CIFAR10/CIFAR100} --model ConvNet --zca
 ```
 
 * For TinyImageNet:
