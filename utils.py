@@ -438,13 +438,13 @@ def evaluate_synset(it_eval, net, images_train, labels_train, testloader, args, 
 
 
 def feature_sparsification(scm_eval, top_k, device):
-    matrix_flatten_eval = scm_eval.reshape(scm_eval.shape[0], scm_eval.shape[1], -1)
-    mask_eval = torch.zeros(matrix_flatten_eval.shape).to(device)
+    scm_flatten_eval = scm_eval.reshape(scm_eval.shape[0], scm_eval.shape[1], -1)
+    mask_eval = torch.zeros(scm_flatten_eval.shape).to(device)
 
-    topk_eval, indices_eval = torch.abs(matrix_flatten_eval).topk(top_k, dim=-1)
+    topk_eval, indices_eval = torch.abs(scm_flatten_eval).topk(top_k, dim=-1)
     top_min_eval, _ = torch.min(topk_eval, dim=-1, keepdim=True)
 
-    mask_eval[torch.abs(matrix_flatten_eval) >= top_min_eval] = 1
+    mask_eval[torch.abs(scm_flatten_eval) >= top_min_eval] = 1
     mask_eval = mask_eval.reshape(scm_eval.shape)
 
     scm_eval = mask_eval * scm_eval

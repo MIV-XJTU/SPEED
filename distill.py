@@ -120,11 +120,11 @@ def main(args):
     freenet = freenet.to(args.device)
     syn_lr = syn_lr.detach().to(args.device).requires_grad_(True)
 
-    optimizer_token = torch.optim.SGD([saet], lr=args.lr_saet, momentum=0.95)
-    optimizer_matrix = torch.optim.SGD([scm], lr=args.lr_scm, momentum=0.95)
+    optimizer_saet = torch.optim.SGD([saet], lr=args.lr_saet, momentum=0.95)
+    optimizer_scm = torch.optim.SGD([scm], lr=args.lr_scm, momentum=0.95)
     optimizer_freenet = torch.optim.SGD(freenet.parameters(), lr=args.lr_freenet, momentum=0.95)
     optimizer_lr = torch.optim.SGD([syn_lr], lr=args.lr_lr, momentum=0.95)
-    optimizer_token.zero_grad()
+    optimizer_saet.zero_grad()
 
     criterion = nn.CrossEntropyLoss().to(args.device)
     print('%s training begins' % get_time())
@@ -360,15 +360,15 @@ def main(args):
         l1_penalty = args.l1_weight * l1_penalty
         total_loss = grand_loss + l1_penalty
 
-        optimizer_token.zero_grad()
-        optimizer_matrix.zero_grad()
+        optimizer_saet.zero_grad()
+        optimizer_scm.zero_grad()
         optimizer_freenet.zero_grad()
         optimizer_lr.zero_grad()
 
         total_loss.backward()
 
-        optimizer_token.step()
-        optimizer_matrix.step()
+        optimizer_saet.step()
+        optimizer_scm.step()
         optimizer_freenet.step()
         optimizer_lr.step()
 
@@ -431,7 +431,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--num_scm', type=int, default=124, help='number of scms')
     parser.add_argument('--num_saet', type=int, default=64, help='number of saets')
-    parser.add_argument('--dim_saet', type=int, default=96, help='dimension of tokens')
+    parser.add_argument('--dim_saet', type=int, default=96, help='dimension of saets')
     parser.add_argument('--img_size', type=int, default=32, help='size of images')
     parser.add_argument('--patch_size', type=int, default=4, help='size of patches')
     parser.add_argument('--num_head', type=int, default=3, help='number of heads')

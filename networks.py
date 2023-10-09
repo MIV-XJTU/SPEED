@@ -777,11 +777,11 @@ class FReeNet(nn.Module):
         imgs = x.reshape(shape=(x.shape[0], 3, h * p, h * p))
         return imgs
 
-    def forward(self, epitomic_tokens, mh_sparse_matrix):
-        x = torch.zeros(size=(mh_sparse_matrix.shape[0], mh_sparse_matrix.shape[-2], epitomic_tokens.shape[-1])).to(epitomic_tokens.device)
+    def forward(self, saet, scm):
+        x = torch.zeros(size=(scm.shape[0], scm.shape[-2], saet.shape[-1])).to(saet.device)
         i = 0
         for blk in self.decoder_blocks:
-            x = blk(epitomic_tokens, mh_sparse_matrix, x)
+            x = blk(saet, scm, x)
             i += 1
 
         # predictor projection
