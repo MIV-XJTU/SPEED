@@ -2,7 +2,7 @@
 
 The official PyTorch implementation of our **NeurIPS 2023 poster** paper:
 
-[Sparse Parameterization for Epitomic Dataset Distillation](https://.pdf) 
+[Sparse Parameterization for Epitomic Dataset Distillation](https://neurips.cc/virtual/2023/poster/71245) 
 
 *Xing Wei, Anjia Cao, Funing Yang, and Zhiheng Ma.*
 
