@@ -112,7 +112,7 @@ If any parts of our paper and code help your research, please consider citing us
 ```
 @inproceedings{wei2023sparse,
     title={Sparse Parameterization for Epitomic Dataset Distillation},
-    author={Wei, Xing and Cao, Anjia and Yang, Funing and Ma, Zhiheng},
+    author={Xing Wei and Anjia Cao and Funing Yang and Zhiheng Ma},
     booktitle={NeurIPS},
     year={2023}
 }
