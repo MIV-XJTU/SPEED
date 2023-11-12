@@ -1,8 +1,8 @@
 # SPEED
 
-The official PyTorch implementation of our **NeurIPS 2023 poster** paper:
+The official PyTorch implementation of our **NeurIPS 2023** paper:
 
-[Sparse Parameterization for Epitomic Dataset Distillation](https://neurips.cc/virtual/2023/poster/71245) 
+[Sparse Parameterization for Epitomic Dataset Distillation](https://openreview.net/pdf?id=ZIfhYAE2xg) 
 
 *Xing Wei, Anjia Cao, Funing Yang, and Zhiheng Ma.*
 
@@ -14,7 +14,7 @@ GitHub maintainer: [Anjia Cao](https://github.com/CAOANJIA)
 
 ### :bookmark:Brief Introduction
 
-The success of deep learning relies heavily on large and diverse datasets, but the storage, preprocessing, and training of such data present significant challenges. To address these challenges, dataset distillation techniques have been proposed to obtain smaller synthetic datasets that capture the essential information of the originals. In this paper, we introduce a **Sparse Parameterization for Epitomic datasEt Distillation (SPEED)** framework, which leverages the concept of dictionary learning and sparse coding to distill epitomes that represent pivotal information of the dataset. SPEED prioritizes proper parameterization of the synthetic dataset and introduces techniques to **capture spatial redundancy within and between synthetic images**. We propose **Spatial-Agnostic Epitomic Tokens (SAETs)** and **Sparse Coding Matrices (SCMs)** to efficiently represent and select significant features. Additionally, we build a **Feature-Recurrent Network (FReeNet)** to generate hierarchical features with high compression and storage efficiency. Experimental results demonstrate the superiority of SPEED in handling high-resolution datasets, achieving state-of-the-art performance on multiple benchmarks and downstream applications. Our framework is compatible with a variety of dataset matching approaches, generally enhancing their performance. This work highlights the importance of proper parameterization in epitomic dataset distillation and opens avenues for efficient representation learning.
+The success of deep learning relies heavily on large and diverse datasets, but the storage, preprocessing, and training of such data present significant challenges. To address these challenges, dataset distillation techniques have been proposed to obtain smaller synthetic datasets that capture the essential information of the originals. In this paper, we introduce a **Sparse Parameterization for Epitomic datasEt Distillation (SPEED)** framework, which leverages the concept of dictionary learning and sparse coding to distill epitomes that represent pivotal information of the dataset. SPEED prioritizes proper parameterization of the synthetic dataset and introduces techniques to capture **spatial redundancy within and between synthetic images**. We propose **Spatial-Agnostic Epitomic Tokens (SAETs)** and **Sparse Coding Matrices (SCMs)** to efficiently represent and select significant features. Additionally, we build a **Feature-Recurrent Network (FReeNet)** to generate hierarchical features with high compression and storage efficiency. Experimental results demonstrate the superiority of SPEED in handling high-resolution datasets, achieving state-of-the-art performance on multiple benchmarks and downstream applications. Our framework is compatible with a variety of dataset matching approaches, generally enhancing their performance. This work highlights the importance of proper parameterization in epitomic dataset distillation and opens avenues for efficient representation learning.
 
 ### :bookmark:Distilled Images
 
