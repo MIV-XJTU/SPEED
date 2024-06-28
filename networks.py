@@ -865,7 +865,7 @@ def Tiny_IPC10_freenet_patch8_dec256d2b8h(**kwargs):
 # N/c=15, K=256, k=192, l1=7e-07 (nette, fruit, meow) / 3e-7 (woof, squawk, yellow), batch_syn=32, syn_step=60, max_start=10
 def ImageNet_IPC1_freenet_patch8_dec192d2b4h(**kwargs):
     model = FReeNet(
-        img_size=192, patch_size=8,
+        img_size=128, patch_size=8,
         decoder_embed_dim=192, decoder_depth=2, decoder_num_heads=4,
         mlp_ratio=1, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
     return model
